@@ -11,7 +11,13 @@ The idea for this was gotten from [roadmap](roadmap.sh) and full details can be 
 - **Read Blog Posts:** Retrieve a single blog post or a list of all blog posts.
 - **Update a Blog Post:** Modify the content, title, category, or tags of an existing post.
 - **Delete a Blog Post:** Remove a blog post by its ID.
-- **Search and Filter:** Search for blog posts by a keyword in the title, content, or category.
+- **Search Blog Posts**
+   **Search Functionality:** Users can search for blog posts by keywords in the title, content, or category.
+   **Case-insensitive Search:** The search is case-insensitive, meaning it will match results regardless of the case of the search term.
+-**Add Comments to Blog Posts**
+   **Comment Functionality:** Users can add comments to individual blog posts.
+   **Structured Comments:** Each comment includes the commenter's name, email, and the comment text.
+   **View Comments:** Comments are associated with specific blog posts and can be retrieved when fetching a blog post.
 - **Basic Error Handling:** Handles common errors such as invalid input and resource not found.
 
 ## Tech Stack
@@ -93,9 +99,12 @@ The idea for this was gotten from [roadmap](roadmap.sh) and full details can be 
   - `404 Not Found` if the post does not exist.
 
 ### 6. Search Blog Posts
-- **URL:** `GET /posts?term=keyword`
+- **URL:** `/posts?term=searchTerm`
+- **Method: GET**
 - **Response:**
-  - `200 OK` with an array of posts matching the keyword.
+   - `200 OK` with an array of matching blog posts.
+   - `404 Not Found` if no posts match the search term.
+
 
 ## Future Enhancements
 - **Pagination:** Add support for paginating results in the GET endpoints.
