@@ -105,6 +105,31 @@ The idea for this was gotten from [roadmap](roadmap.sh) and full details can be 
    - `200 OK` with an array of matching blog posts.
    - `404 Not Found` if no posts match the search term.
 
+### 6. Add Comments
+- **URL:** `/posts/:postId/comments`
+- **Method: POST**
+- **Request Body**
+   - `name`: The name of the commenter (required).
+   - `email`: The email of the commenter (required).
+   - `comment`: The comment text (required).
+  ```json
+    {
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "comment": "This is a great post!"
+    }
+  ```
+  - **Example Response**
+   ```json
+    {
+     "id": 1,
+    "postId": 1,
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "comment": "This is a great post!",
+    "createdAt": "2024-09-01T12:30:00Z"
+  }
+  ```
 
 ## Future Enhancements
 - **Pagination:** Add support for paginating results in the GET endpoints.
