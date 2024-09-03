@@ -4,7 +4,7 @@
 ## Overview
 This project is a simple RESTful API built using Node.js and Express for a personal blogging platform. It allows users to perform basic CRUD operations on blog posts, including creating, reading, updating, and deleting posts. The API also supports searching and filtering posts by keywords.
 
-The idea for this was gotten from (roadmap)[roadmap.sh] and full details can be found (here)[https://roadmap.sh/projects/blogging-platform-api]
+The idea for this was gotten from [roadmap](roadmap.sh) and full details can be found [here](https://roadmap.sh/projects/blogging-platform-api)
 
 ## Features
 - **Create a New Blog Post:** Add a new blog post with a title, content, category, and tags.
